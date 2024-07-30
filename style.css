@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryFF: Montserrat, sans-serif;
+    --secondaryFF: Fraunces, sans-serif;
+    --primaryFW: 500;
+    --secondaryFW: 700;
+    --mainFontSize: 0.875rem;
+    --backgroundColour: hsl(30, 38%, 92%);
+    --primaryColour: hsl(158, 36%, 37%);
+    --headerColour: hsl(212, 21%, 14%);
+    --textColour: hsl(228, 12%, 48%);
+}
+
+body {
+    margin: 0;
+    font-family: var(--primaryFF);
+    font-size: var(--mainFontSize);
+    font-weight: var(--primaryFW);
+    color: var(--textColour);
+    background-color: var(--backgroundColour);
+}
+
+main {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 21rem;
+    margin: 0.875rem 1rem;
+}
+
+.mobile-image {
+    display: block;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    max-width: 21rem;
+}
+
+.container {
+    padding: calc(var(--mainFontSize) * 1.5);
+}
+
+.alt-font {
+    font-family: var(--secondaryFF);
+}
+
+.item-type-identifier {
+    letter-spacing: 0.3rem;
+    font-size: 0.75em;
+}
+
+.product-name {
+    color: var(--headerColour);
+    margin-block: 0.4rem 0.75rem;
+    line-height: 1.2;
+}
+
+.description {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.new-price {
+    font-size: 2em;
+    font-weight: var(--secondaryFW);
+    color: var(--primaryColour);
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+.button {
+    display: block;
+    margin: auto;
+    background-color: var(--primaryColour);
+    padding-block: 1rem;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-weight: calc(var(--secondaryFW) - 100);
+}
