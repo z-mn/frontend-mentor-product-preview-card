@@ -13,6 +13,7 @@
     --mainFontSize: 0.875rem;
     --backgroundColour: hsl(30, 38%, 92%);
     --primaryColour: hsl(158, 36%, 37%);
+    --primaryColourDark: hsl(158, 36%, 20%);
     --headerColour: hsl(212, 21%, 14%);
     --textColour: hsl(228, 12%, 48%);
 }
@@ -33,23 +34,26 @@ main {
 }
 
 .card {
-    background-color: white;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     max-width: 21rem;
     margin: 0.875rem 1rem;
+    padding: 0;
 }
 
-.mobile-image {
-    display: block;
-    margin: 0;
+.image {
+    background-image: url(images/image-product-mobile.jpg);
+    background-position: center;
+    background-size: cover;
     border-radius: 10px 10px 0 0;
     max-width: 21rem;
+    min-height: 15rem;
 }
 
 .container {
     padding: calc(var(--mainFontSize) * 1.5);
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .alt-font {
@@ -90,7 +94,6 @@ main {
 
 .button {
     display: block;
-    margin: auto;
     background-color: var(--primaryColour);
     padding-block: 1rem;
     border-radius: 10px;
@@ -100,4 +103,23 @@ main {
     color: white;
     text-decoration: none;
     font-weight: calc(var(--secondaryFW) - 100);
+    margin: 0;
+}
+
+.button:hover {
+    background-color: var(--primaryColourDark);
+}
+
+@media screen and (width > 100px) {
+    .card {
+        flex-direction: row;
+        border-radius: 0px 10px 10px 0px;
+    }
+    .image {
+        background-image: url(images/image-product-desktop.jpg);
+        background-position: center;
+        background-size: cover;
+        max-width: 21rem;
+        min-height: 15rem;
+    }
 }
